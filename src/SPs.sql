@@ -21,7 +21,7 @@ delimiter //
 create procedure editProduct(newId int,newCode varchar(10),newName varchar(50),newPrice int,newAmount int,newDescript varchar(50),newStatus bit)
 begin
     update products p set p.productCode = newCode, p.productName = newName,
-                          p.productPrice = newPrice, p.productAmount = newAmount, p.productDescription = newDescript,
+                          p.productPrice  = newPrice, p.productAmount = newAmount, p.productDescription = newDescript,
                           p.productStatus = newStatus where p.id = newId;
 end //
 //delimiter ;
